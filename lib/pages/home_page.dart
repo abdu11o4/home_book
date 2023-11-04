@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:home_book/pages/book_page.dart/book_two_page.dart';
+import 'package:home_book/pages/book_page.dart/book_one_page.dart';
+import 'package:home_book/pages/photo/photo_boys_page.dart';
+import 'package:home_book/pages/photo/photo_girl_page.dart';
 import 'package:home_book/pages/profile_page.dart';
 import 'package:home_book/pages/setting_page.dart';
 
@@ -42,8 +44,51 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
-              icon: const Icon(Icons.book),
-            )
+              icon: const Icon(
+                Icons.book,
+                size: 40,
+              ),
+            ),
+            const Text(
+              "Books",
+              style: TextStyle(fontSize: 20),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const BoysPage(),
+                  ),
+                );
+              },
+              icon: const Icon(
+                Icons.photo,
+                size: 40,
+              ),
+            ),
+            const Text(
+              "Boys",
+              style: TextStyle(fontSize: 20),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const GirlsPage(),
+                  ),
+                );
+              },
+              icon: const Icon(
+                Icons.photo,
+                size: 40,
+              ),
+            ),
+            const Text(
+              "Girls",
+              style: TextStyle(fontSize: 20),
+            ),
           ],
         ),
       ),
