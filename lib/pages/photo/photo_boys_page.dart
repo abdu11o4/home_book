@@ -37,7 +37,12 @@ class BoysPage extends StatelessWidget {
           Image.asset(
             "assets/kunduzi.jpg",
           ),
-          Image.asset("assets/yakudza.jpg"),
+          const SizedBox(height: 6),
+          Image.asset(
+            "assets/yakudza.jpg",
+            width: 200,
+            height: 200,
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
